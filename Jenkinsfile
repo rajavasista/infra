@@ -12,7 +12,7 @@ pipeline
                     if(params.Environment == 'development') 
                     {
                         sh 'echo "$params.Environment"'
-                        sh 'echo "********** ${Environment} ************"'
+                        sh 'echo "********** $Environment ************"'
                         sh 'echo "This is Dev Environment"'
                     }
                     else {
