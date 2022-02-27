@@ -11,9 +11,13 @@ pipeline
                 script {
                     if(params.Environment == 'development') 
                     {
-                        // echo "Env=" params.Environment
+                        echo 'Env=' ${params.Environment}
+                        sh 'echo "$params.Environment"'
+                        sh 'echo "${Environment}"'
                         sh 'echo "This is Dev Environment"'
-
+                    }
+                    else {
+                        sh 'echo "This is NOT Dev Environment"'
                     }
                 }
                 echo 'Hello World !!!'
