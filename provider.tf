@@ -1,5 +1,6 @@
 provider "aws" {
   region = var.region
+  profile = default
 }
 
 terraform {
@@ -8,6 +9,7 @@ terraform {
     bucket = "vasista-devops-s3"
     key    = "mystate.tfstate"
     region = "eu-west-2"
+    profile = "default"
     # dynamodb_table = "mydynamo-tf-state-lock"
   }
 
