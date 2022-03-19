@@ -5,7 +5,7 @@ module "my_public_subnet_calling_module" {
     source = "git::ssh://git@github.com/rajavasista/terraform-modules.git//subnet/module?ref=main"
     vpc_id = module.myvpc_calling_module.myvpc_id
     subnet_cidr_block = var.public_subnets[count.index]
-    project = "INFRA_TRAINING" 
+    project = "INFRA_TRAINING"
 }
 
 module "my_private_subnet_calling_module" {
